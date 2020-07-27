@@ -27,4 +27,10 @@ class GraphArea:
         self.height = height
         self.style  = style
         self.equations = eqs
+        
+    def reset():
         turtle.reset()
+        turtle.home()
+        turtle.clear()
+    def draw():
+        pass
