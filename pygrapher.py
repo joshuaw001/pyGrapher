@@ -6,7 +6,13 @@ class GraphStyle:
     pass
 
 class Equation:
-    pass
+    def __init__(self,text):
+        self.text = text
+        text.replace("x","{}")
+        self.y = []
+        for x in range(0,100):
+            self.y += eval(text.format(x))
+            
 
 class axis:
     X_AXIS = 1
@@ -27,10 +33,20 @@ class GraphArea:
         self.height = height
         self.style  = style
         self.equations = eqs
-        
+        self.screen = TurtleScreen()
+        self.screen.screensize(150,150)
     def reset():
         turtle.reset()
         turtle.home()
         turtle.clear()
-    def draw():
-        pass
+    def draw(eq):
+        turtle.
+        for x in range(0,self.screen.screensize()[0]):
+            turtle.pu()
+            turtle.goto(x,eq.y[x])
+            turtle.pd()
+            turtle.dot(self.style.pointsize,self.style.pointcolor)
+            
+            
+            
+        
